@@ -13,7 +13,7 @@
        Exemplos: "center top" | "center center" | "60% top" | "80% 20%"
        ─────────────────────────────────────────────────────────────────── */
     --hero-img-position-desktop: center top;  /* posição no desktop  */
-    --hero-img-position-mobile:  87%;  /* posição no mobile   */
+    --hero-img-position-mobile:  88%;  /* posição no mobile   */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -133,7 +133,7 @@ nav {
 .text-outline { color: transparent; -webkit-text-stroke: 1px var(--dark); }
 .hero p { font-size: 1.2rem; color: #444; margin-bottom: 40px; max-width: 500px; line-height: 1.6; }
 
-.hero-actions { display: flex; align-items: center; gap: 30px; }
+.hero-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
 .btn-main {
     background: var(--primary); color: var(--white); padding: 18px 35px;
     border-radius: 50px; text-decoration: none; font-weight: 600;
@@ -143,13 +143,14 @@ nav {
 
 .hero-socials { display: flex; gap: 15px; }
 .insta-pill { 
-    width: 60px; height: 60px; background: var(--white); 
+    width: auto; height: auto; background: var(--white); 
     display: flex; align-items: center; justify-content: center; 
-    border-radius: 50%; color: var(--dark); transition: var(--transition);
+    border-radius: 50px; color: var(--dark); transition: var(--transition);
     text-decoration: none;
+    padding: 10px 20px; gap: 12px;
 }
-.insta-pill i { font-size: 1.6rem; }
-.insta-handle { display: none; }
+.insta-pill i { font-size: 1.5rem; }
+.insta-handle { display: block; font-weight: 600; font-size: 0.95rem; color: var(--dark); }
 
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
@@ -258,9 +259,9 @@ nav {
     .hero h1 { font-size: 2rem; margin-bottom: 12px; }
     .hero p { font-size: 0.95rem; margin: 0 0 20px; line-height: 1.5; }
     .hero-badge { margin-bottom: 12px; font-size: 0.75rem; padding: 6px 12px; }
-    .hero-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .hero-actions { gap: 12px; }
     .btn-main { width: 280px; text-align: center; }
-    .hero-socials { width: 280px; justify-content: center; }
+    .hero-socials { width: fit-content; justify-content: flex-start; }
 
     .btn-main { padding: 14px 24px; font-size: 0.9rem; }
     .hero .container { padding-top: 160px; padding-bottom: 40px; display: flex; align-items: flex-end; min-height: 100vh; }
@@ -318,25 +319,7 @@ nav {
     .main-card .bento-overlay { z-index: 1; }
     .main-card .bento-text { z-index: 2; }
 
-    /* 3. Instagram: Transformar círculo em pílula com @ */
-    .insta-pill {
-        width: auto;               
-        height: auto;             
-        padding: 10px 20px;       
-        border-radius: 50px;      
-        display: flex;
-        align-items: center;
-        gap: 12px;                
-    }
-    .insta-pill i {
-        font-size: 1.5rem;        
-    }
-    .insta-handle {
-        display: block;           
-        font-weight: 600;
-        font-size: 0.95rem;
-        color: var(--dark);
-    }
+    /* 3. Instagram: hover effect */
     .insta-pill:hover {
         background: var(--white);
         transform: scale(1.05);
