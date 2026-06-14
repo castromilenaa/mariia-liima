@@ -13,7 +13,7 @@
        Exemplos: "center top" | "center center" | "60% top" | "80% 20%"
        ─────────────────────────────────────────────────────────────────── */
     --hero-img-position-desktop: center top;  /* posição no desktop  */
-    --hero-img-position-mobile:  88%;  /* posição no mobile   */
+    --hero-img-position-mobile:  88.5%;  /* posição no mobile   */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
